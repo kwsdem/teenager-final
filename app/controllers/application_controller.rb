@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
     if current_user.try(:blogpublisher?)
       find_friends_path
     else
-      "home/front"
+      redirect_to("home/front")
     end
   end
 
